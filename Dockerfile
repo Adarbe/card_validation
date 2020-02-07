@@ -1,4 +1,4 @@
-FROM python:3.6
+FROM card_validation.py
 
 RUN apt-get update && apt-get install -y
 RUN mkdir /app
