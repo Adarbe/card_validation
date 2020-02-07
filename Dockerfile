@@ -1,7 +1,6 @@
 FROM alpine:latest
 
-RUN apt-get update && apt-get install -y
-    apt-get python3
+RUN update && apt-get install -y
 
 WORKDIR /app
 
