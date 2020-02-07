@@ -1,8 +1,10 @@
-FROM card_validation.py
+FROM alpine:latest
 
 RUN apt-get update && apt-get install -y
-RUN mkdir /app
-WORKDIR /app
-COPY card_validation.py /app
+    apt-get python3
 
-CMD [ "python", "./card_validation.py" ]
+WORKDIR /app
+
+COPY ./card_validation.py /app
+
+CMD [ "python3", "card_validation.py" ]
