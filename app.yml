@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: LoadBalancer
   labels:
-    app: 
+    app: card-validation
 spec:
   type: LoadBalancer
   ports:
@@ -19,7 +19,7 @@ spec:
   selector:
 
 
-  
+
     matchLabels:
       app: card-validation
   replicas: 2 # tells deployment to run 2 pods matching the template
@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
       - name: card-validation
-        image: 
+        image:
         ports:
         - containerPort: 80
