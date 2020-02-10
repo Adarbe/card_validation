@@ -1,7 +1,7 @@
 apiVersion: v1      # for versions before 1.9.0 use apps/v1beta2
 kind: Service
 metadata:
-  name: LoadBalancer
+  name: card-validation-service
   labels:
     app: card-validation
 spec:
@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
       - name: card-validation
-        image:
+        image: IMAGE_PLA
         ports:
         - containerPort: 80
